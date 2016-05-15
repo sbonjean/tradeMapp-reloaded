@@ -1,0 +1,52 @@
+/////////////////////////////
+INSTALL
+////////////////////////////
+
+To install as a dependency (Will show in package.son)
+npm install —-save xxxx 
+
+To install as a dev dependency (Will show in package.son)
+npm install —-save-dev xxxx 
+
+
+////////////////////////////
+RUN
+///////////////////////////
+
+Run from consol
+NODE_ENV=production node server.js
+NODE_ENV=development node server.js
+
+Run lancant les scripts
+npm run stratDev
+npm run stratProd
+(See related scripts in package.json, "dev": "open http://localhost:3000 & node server")
+
+Run gulp task xxx
+gulp
+
+///////////////////////////
+TESTING
+//////////////////////////
+
+To stop at first problem :
+mocha -b
+
+To run the tests in development :
+mocha
+
+To run the tests in list :
+mocha -R list
+
+To run only tests containing name "pg" :
+mocha -g pg
+
+
+We can nest description
+describe('pg connection', function() {
+    describe('pg config', function() {
+        it('should have configuration details of Heroku Postgres database', function() {
+            var conString = require("../db/pg/config.js");
+        });
+    });
+});
