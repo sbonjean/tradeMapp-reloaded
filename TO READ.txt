@@ -1,4 +1,17 @@
 /////////////////////////////
+CREATE NEW APPLICATION
+////////////////////////////
+npm init
+npm install express -save
+npm install pg -save
+npm install mocha --save-dev
+npm install gulp --save-dev
+npm install should --save-dev
+
+
+
+
+/////////////////////////////
 INSTALL
 ////////////////////////////
 
