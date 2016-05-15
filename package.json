@@ -1,6 +1,12 @@
 {
   "name": "trademapp",
+  "subdomain": "trademapp",
+  "domains": [
+    "trademapp.com",
+    "www.trademapp.com"
+  ],
   "version": "2.0.0",
+  "private":true,
   "description": "Trade Makerting Application",
   "main": "server.js",
   "scripts": {

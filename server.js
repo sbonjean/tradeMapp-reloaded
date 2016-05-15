@@ -9,5 +9,6 @@ res.setHeader('Content-Type', 'text/plain');
 res.end('Hello World\n');
 })
 server.listen(port, hostname, () => {
+    console.log(process.env.NODE_ENV);
     console.log(`Server running at http://${hostname}:${port}/`);
 })
