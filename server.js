@@ -1,14 +1,13 @@
-const http = require('http');
+/*
+ ------------------------------
+ Building express application
+ ------------------------------
+ */
 
-const hostname = '127.0.0.1';
-const port = 3000;
+var http = require('http'), // To use the HTTP server and client
+    app = require('./app'); // Load up app.js and store it in app object
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-res.setHeader('Content-Type', 'text/plain');
-res.end('Hello World\n');
-})
-server.listen(port, hostname, () => {
-    console.log(process.env.NODE_ENV);
-    console.log(`Server running at http://${hostname}:${port}/`);
-})
+http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+//Returns a new web server object with app as the request listener
+});

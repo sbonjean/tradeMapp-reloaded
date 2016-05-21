@@ -1,0 +1,6 @@
+//--------------------------------------------
+mixin pageWrapper(args)
+    //- set page wrapper div
+    div(class="page #{args.class} #{args.pageAsClass}")
+        //- Always sets an alert message container unless stated False
+        block

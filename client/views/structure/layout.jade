@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    //- Page head (html structure)
+    head
+        title TradeMapp - Trade Marketing Application
+        - if(env === "development"){
+            link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
+            link(rel='stylesheet', href='/builds/stylesExternal.min.css')
+            link(rel='stylesheet', href='/styles/styles.css')
+            block pageSpecificStyleDev
+        - } else {
+            block pageSpecificStyleProd
+            // link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
+            // link(rel='stylesheet', href='/builds/stylesProd.min.css')
+        - }
+    //- Page body (html structure)
+    
+    header
+        div(class="page #{page} ")
+            block header
+    
+    body
+        div(class="page #{page} ")
+            block page
+
+    footer
+        div(class="page #{page} ")
+            block footer
