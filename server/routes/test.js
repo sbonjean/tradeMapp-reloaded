@@ -74,7 +74,7 @@ module.exports = function(app) {
 
     // Requiring routes
 
-    // var login = require('./login.js')(app, envVar);
+    // var login = require('./login.test.js')(app, envVar);
     // var landing = require('./landing.js')(app, envVar);
 
     // var test = require('../lib/db/pg/crud/insert.js')(app);
