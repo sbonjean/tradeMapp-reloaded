@@ -3,11 +3,18 @@ CREATE NEW APPLICATION
 ////////////////////////////
 npm init
 npm install express -save
+npm install bootstrap -save
 npm install pg -save
+
 npm install mocha --save-dev
 npm install gulp --save-dev
 npm install should --save-dev
 
+———Client
+npm install react —-save
+??? npm install react-dom
+npm install webpack --save-dev
+npm install babel-loader --save-dev
 
 
 

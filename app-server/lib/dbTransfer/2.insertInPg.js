@@ -48,8 +48,8 @@ var insertInPg = function(collection, doc, insertInPgCallback) {
             break;
 
         case "layout":
-            createAction = 'CREATE TABLE "layout" ("id" SERIAL PRIMARY KEY, "lan" VARCHAR(10), "page" VARCHAR(15), "elements" JSON)';
-            insertAction = 'INSERT INTO "layout" ("lan","page","elements") values($1,$2,$3)';
+            createAction = 'CREATE TABLE "layout.json" ("id" SERIAL PRIMARY KEY, "lan" VARCHAR(10), "page" VARCHAR(15), "elements" JSON)';
+            insertAction = 'INSERT INTO "layout.json" ("lan","page","elements") values($1,$2,$3)';
             data = [doc.lan, doc.page, doc.elements];
             break;
 

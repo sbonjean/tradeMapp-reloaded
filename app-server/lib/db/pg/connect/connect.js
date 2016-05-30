@@ -32,7 +32,6 @@ var query = function(donequery, args) {
 
 
 
-        debugger;
 
         if (err) {
             //call `doneconnect()` to release the client back to the pool
@@ -45,8 +44,8 @@ var query = function(donequery, args) {
             //call `doneconnect()` to release the client back to the pool
             doneconnect();
 
-            // console.log('err', err);
-            // console.log('resut', result);
+//            console.log('err', err);
+ //           console.log('resut', result);
 
             if (err) {
                 // console.error('error querying client from pool', err);

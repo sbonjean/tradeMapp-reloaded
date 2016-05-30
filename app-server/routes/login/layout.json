@@ -1,0 +1,33 @@
+{
+  "pageName": "login",
+  "french": {
+    "language": "fr",
+    "content": {
+      "tradeMapp": "TradeMapp",
+      "login": "login",
+      "passWord": "Mot de passe",
+      "header": "Trade Marketing App",
+      "userNotFound": "Utilisateur non trouvé",
+      "subscriptionToRenew": "Votre subscription doit être renouvelée",
+      "passwordIncorrect": "Mot de passe incorrect",
+      "connectionPb": "Oops, nous avons un problème de connection",
+      "unvalidFields": "Les donnees entrees sont incorrects",
+      "emptyFieds": "Veuillez indiquer l'utilisateur et le mot de passe"
+    }
+  },
+  "english": {
+    "language": "en",
+    "content": {
+      "tradeMapp": "TradeMapp",
+      "login": "Login",
+      "passWord": "Password",
+      "header": "Trade Marketing App",
+      "userNotFound": "User not found",
+      "passwordIncorrect": "Incorrect password",
+      "subscriptionToRenew": "Your subscription is to be renewed",
+      "connectionPb": "Oops, we have problems connecting to the database, please try again later",
+      "unvalidFields": "Unvalid entered fields, please check",
+      "emptyFieds": "Please fill in user name and password"
+    }
+  }
+}

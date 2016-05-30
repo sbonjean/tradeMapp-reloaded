@@ -20,6 +20,8 @@ module.exports = function(app) {
 
         var transferUser = require('../lib/dbTransfer/0.transfer.js')();
 
+        res.send('hello world');
+        
         //     res.sendfile("views/landing/landing.html");
 
 

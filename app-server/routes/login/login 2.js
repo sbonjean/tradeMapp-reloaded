@@ -1,24 +1,37 @@
-module.exports = function(app) {
-    console.log('teste');
-};
-module.exports = function(app) {
+/*
+ * Home page.
+ */
+
+/*jslint browser:true */
+/*global $, jQuery*/
+/*jslint node: true */
+/*jslint plusplus: true */
+/*jslint devel: true */
+
+
+module.exports = function(app, dbModels, gnFuncs, env, layout) {
+
+    var page = "login";
+
 
     // ------------------------------------------------------------------
     app.get('/login', function(req, res) {
-        res.render('login/login', {
-            env: app.get('env'),
-            page: 'login'
+
+        // Goes to dashboard if a session is already set
+        if (gnFuncs(req).security.cookies.areSet()) {
+            res.redirect('../dashboard');
+            return;
+        }
+
+        res.render('login', {
+            layout: layout.get(page),
+            message: '',
+            page: page,
+            env: env
         });
         return; // return is usefull as res.render will not stop the script
+
     });
-
-
-
-
-
-
-
-
 
     // ------------------------------------------------------------------
     app.post('/login', function(req, res) {
@@ -87,14 +100,6 @@ module.exports = function(app) {
                 }
             });
 
-
-
-
-
-
-
-
-
             var subscriptionPromiseQuery = gnFuncs(req).queries.find.one(dbModels, {
                 collection: "subscription",
                 match: {
@@ -127,9 +132,4 @@ module.exports = function(app) {
             });
         });
     });
-
-
-
-
-
 };
