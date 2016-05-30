@@ -12,9 +12,15 @@ npm install should --save-dev
 
 ———Client
 npm install react —-save
+npm install react —-save
+
 ??? npm install react-dom
-npm install webpack --save-dev
-npm install babel-loader --save-dev
+sudo npm install webpack --save-dev
+sudo npm install babel-loader babel-core babel-preset-es2015 babel-preset-react --save-dev
+
+
+## To be removed if not used
+npm uninstall bootstrap
 
 
 

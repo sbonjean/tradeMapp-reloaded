@@ -16,7 +16,7 @@ app.set('port', process.env.PORT || 3000);
 //app.set('views', path.join(__dirname, './views'));
 //app.set('view engine', 'jade');
 //app.set("jsonp callback", true);
-app.use(express.static('./app-client/public'));
+app.use(express.static('./public'));
 app.use(express.static('./node_modules/bootstrap/dist'));
 //app.use(cookieParser());
 //app.use(bodyParser.urlencoded({
